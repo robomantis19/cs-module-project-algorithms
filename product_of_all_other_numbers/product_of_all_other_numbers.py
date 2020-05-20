@@ -4,8 +4,25 @@ Returns: a List of integers
 '''
 def product_of_all_other_numbers(arr):
     # Your code here
+    ret_arr = []
+    new_arr = []
+    if len(arr) == 2: 
+        ret_arr.append(arr[1])
+        ret_arr.append(arr[0])
+        return ret_arr
+    for i in range(0, len(arr)): 
+        not_it = arr[i]
+        for j in arr:
+            if j != not_it: 
+                new_arr.append(not_it)
+        product = 1
+        for p in new_arr: 
+            product *= p
+        ret_arr.append(product)
+    print(ret_arr)
+        
 
-    pass
+    #this code didn't work try popping it and multiplying values next time.
 
 
 if __name__ == '__main__':
