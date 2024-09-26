@@ -4,8 +4,20 @@ import sys
 
 def making_change(amount, denominations):
   # Your code here
-
-  pass
+  additions = []
+  for i in denominations: 
+      multiplier = amount//i
+      print('multiplier', multiplier)
+      # multi = i * multiplier
+      # print('multi', multi)
+      additions.append(multiplier)
+  total = 1
+  for i in additions: 
+     
+      if i > 0:
+        
+        total += i*len(denominations)
+  return total
 
 
 if __name__ == "__main__":

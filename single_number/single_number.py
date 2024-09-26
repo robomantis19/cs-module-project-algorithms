@@ -4,8 +4,16 @@ Returns: an integer
 '''
 def single_number(arr):
     # Your code here
-
-    pass
+    dictionary = {}
+    for i in arr: 
+        dictionary[f'{i}'] = 0
+    for i in range(len(arr)):
+        dictionary[f'{arr[i]}'] += 1 
+        
+    for key, value in dictionary.items(): 
+        if value == 1: 
+            return int(key)
+    
 
 
 if __name__ == '__main__':
